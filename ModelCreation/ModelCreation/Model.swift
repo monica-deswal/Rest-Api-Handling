@@ -67,6 +67,8 @@ struct TempPokemon: Codable {
             decodedTypes.append(type)
         }
         
+        types = decodedTypes
+        
         var statsContainer = try container.nestedUnkeyedContainer(forKey: .stats)
     
         while !statsContainer.isAtEnd {
